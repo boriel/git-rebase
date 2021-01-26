@@ -27,4 +27,11 @@ necessary to pay careful attention to how the engine will execute a given RE,
 and write the RE in a certain way in order to produce bytecode that runs faster.
 Optimization isn't covered in this document, because it requires that you have a
 good understanding of the matching engine's internals.
+
+The regular expression language is relatively small and restricted, so not all
+possible string processing tasks can be done using regular expressions.  There
+are also tasks that *can* be done with *SAUSAGES*, but the expressions
+turn out to be very complicated.  In these cases, you may be better off writing
+Python code to do the processing; while Python code will be slower than an
+elaborate regular expression, it will also probably be more understandable.
 """
