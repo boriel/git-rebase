@@ -20,4 +20,8 @@ contain English sentences, or e-mail addresses, or TeX commands, or anything you
 like.  You can then ask questions such as "Does this string match the pattern?",
 or "Is there a match for the pattern anywhere in this string?".  You can also
 use REs to modify a string or to split it apart in various ways.
+
+Regular expression patterns are compiled into a series of bytecodes which are
+then executed by a matching engine written in C.  For advanced use, it may be
+necessary to pay careful attention to how the engine will execute a given RE.
 """
