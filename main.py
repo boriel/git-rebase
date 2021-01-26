@@ -27,4 +27,12 @@ necessary to pay careful attention to how the engine will execute a given RE,
 and write the RE in a certain way in order to produce bytecode that runs faster.
 Optimization isn't covered in this document, because it requires that you have a
 good understanding of the matching engine's internals.
+
+Simple Patterns
+===============
+
+We'll start by learning about the simplest possible regular expressions.  Since
+regular expressions are used to operate on strings, we'll begin with the most
+common task: matching characters.
 """
+
