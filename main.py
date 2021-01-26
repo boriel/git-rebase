@@ -34,5 +34,19 @@ Simple Patterns
 We'll start by learning about the simplest possible regular expressions.  Since
 regular expressions are used to operate on strings, we'll begin with the most
 common task: matching characters.
+
+Matching Characters
+-------------------
+
+Most letters and characters will simply match themselves.  For example, the
+regular expression ``test`` will match the string ``test`` exactly.  (You can
+enable a case-insensitive mode that would let this RE match ``Test`` or ``TEST``
+as well; more about this later.)
+
+There are exceptions to this rule; some characters are special
+:dfn:`metacharacters`, and don't match themselves.  Instead, they signal that
+some out-of-the-ordinary thing should be matched, or they affect other portions
+of the RE by repeating them or changing their meaning.  Much of this document is
+devoted to discussing various metacharacters and what they do.
 """
 
