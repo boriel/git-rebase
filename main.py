@@ -35,6 +35,10 @@ We'll start by learning about the simplest possible regular expressions.  Since
 regular expressions are used to operate on strings, we'll begin with the most
 common task: matching characters.
 
+For a detailed explanation of the computer science underlying regular
+expressions (deterministic and non-deterministic finite automata), you can refer
+to almost any textbook on writing compilers.
+
 Matching Characters
 -------------------
 
