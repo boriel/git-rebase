@@ -30,7 +30,7 @@ good understanding of the matching engine's internals.
 
 The regular expression language is relatively small and restricted, so not all
 possible string processing tasks can be done using regular expressions.  There
-are also tasks that *can* be done with *SAUSAGES*, but the expressions
+are also tasks that *can* be done with regular expressions, but the expressions
 turn out to be very complicated.  In these cases, you may be better off writing
 Python code to do the processing; while Python code will be slower than an
 elaborate regular expression, it will also probably be more understandable.
