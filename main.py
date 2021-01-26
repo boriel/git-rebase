@@ -50,6 +50,26 @@ this RE against the string ``'abcbd'``.
 | 4    | ``abcb``  | Back up, so that  ``[bcd]*``    |
 |      |           | matches one less character.     |
 +------+-----------+---------------------------------+
+| 5    | *Failure* | Try ``b`` again, but the        |
+|      |           | current position is at the last |
+|      |           | character, which is a ``'d'``.  |
++------+-----------+---------------------------------+
+| 6    | ``abc``   | Back up again, so that          |
+|      |           | ``[bcd]*`` is only matching     |
+|      |           | ``bc``.                         |
++------+-----------+---------------------------------+
+| 6    | ``abcb``  | Try ``b`` again.  This time     |
+|      |           | the character at the            |
+|      |           | current position is ``'b'``, so |
+|      |           | it succeeds.                    |
++------+-----------+---------------------------------+
+
+The end of the RE has now been reached, and it has matched ``'abcb'``.  This
+demonstrates how the matching engine goes as far as it can at first, and if no
+match is found it will then progressively back up and retry the rest of the RE
+again and again.  It will back up until it has tried zero matches for
+``[bcd]*``, and if that subsequently fails, the engine will conclude that the
+string doesn't match the RE at all.
 
 Another repeating metacharacter is ``+``, which matches one or more times.  Pay
 careful attention to the difference between ``*`` and ``+``; ``*`` matches
