@@ -23,5 +23,8 @@ use REs to modify a string or to split it apart in various ways.
 
 Regular expression patterns are compiled into a series of bytecodes which are
 then executed by a matching engine written in C.  For advanced use, it may be
-necessary to pay careful attention to how the engine will execute a given RE.
+necessary to pay careful attention to how the engine will execute a given RE,
+and write the RE in a certain way in order to produce bytecode that runs faster.
+Optimization isn't covered in this document, because it requires that you have a
+good understanding of the matching engine's internals.
 """
